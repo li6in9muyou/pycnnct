@@ -59,9 +59,9 @@ class CustomHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         </head>
         <body>
             <h1>Upload File</h1>
+            <p>it uploads as soon as you select a file</p>
             <form method="post" enctype="multipart/form-data">
-                <input type="file" name="file" required>
-                <input type="submit" value="Upload">
+                <input type="file" name="file" required onchange="this.form.submit()">
             </form>
         </body>
         </html>
