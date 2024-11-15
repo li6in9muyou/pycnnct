@@ -48,6 +48,7 @@ class CustomHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         self.wfile.write(b"""
         <!doctype html>
         <html>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <head>
             <style>
                 * {
@@ -60,6 +61,7 @@ class CustomHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         <body>
             <h1>Upload File</h1>
             <p>it uploads as soon as you select a file</p>
+            <p>do not leave the browser until it says upload is successful</p>
             <form method="post" enctype="multipart/form-data">
                 <input type="file" name="file" required onchange="this.form.submit()">
             </form>
